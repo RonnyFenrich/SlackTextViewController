@@ -205,6 +205,8 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
     [self.scrollViewProxy flashScrollIndicators];
     
     self.viewVisible = YES;
+
+    [self slk_adjustContentConfigurationIfNeeded];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -228,8 +230,6 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    
-    [self slk_adjustContentConfigurationIfNeeded];
 }
 
 - (void)viewDidLayoutSubviews
